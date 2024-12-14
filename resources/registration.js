@@ -12,7 +12,6 @@ document.getElementById('registerForm').addEventListener('submit', async (e) => 
  });
  
  
- // Handle view page buttons
  async function handleButtonClick(action, value) {
     const endpointMap = {
         view_all: '/api/registrations',
@@ -37,8 +36,8 @@ document.getElementById('registerForm').addEventListener('submit', async (e) => 
  
  
  function displayData(data) {
-    const outputDiv = document.getElementById('output'); // Ensure this matches the div ID in view.html
-    outputDiv.innerHTML = ''; // Clear previous content
+    const outputDiv = document.getElementById('output');
+    outputDiv.innerHTML = ''; 
  
  
     if (!data || data.length === 0) {
@@ -51,7 +50,6 @@ document.getElementById('registerForm').addEventListener('submit', async (e) => 
     table.border = '1';
  
  
-    // Add table header
     const headerRow = document.createElement('tr');
     ['Ticket Number', 'Name', 'Email', 'Date', 'Event Name'].forEach(header => {
         const th = document.createElement('th');
@@ -61,7 +59,6 @@ document.getElementById('registerForm').addEventListener('submit', async (e) => 
     table.appendChild(headerRow);
  
  
-    // Add table rows for each result
     data.forEach(registration => {
         const row = document.createElement('tr');
         ['ticketNumber', 'name', 'email', 'date', 'eventName'].forEach(key => {
