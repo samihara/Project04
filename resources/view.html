@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Manage Registrations</title>
+   <link rel="stylesheet" href="/resources/styles.css">
+   <script src="/resources/registration.js" defer></script>
+</head>
+<body>
+   <div class="main-container">
+       <div class="management-container">
+           <h1>Manage Registrations</h1>
+           <div class="search-container">
+               <input type="text" id="searchValue" placeholder="Enter Search Value" />
+               <button onclick="handleButtonClick('view_all')">View All</button>
+               <button onclick="handleButtonClick('by_name', document.getElementById('searchValue').value)">Search by Name</button>
+               <button onclick="handleButtonClick('by_event', document.getElementById('searchValue').value)">Search by Event</button>
+               <button onclick="handleButtonClick('delete_ticket', document.getElementById('searchValue').value)">Delete Ticket</button>
+           </div>
+           <div id="output" class="output-container"></div>
+       </div>
+   </div>
+</body>
+</html>
+
+
